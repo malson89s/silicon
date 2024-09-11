@@ -28,6 +28,12 @@ body {
     font-size: 16px;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
 /* mobilläge/ */
 .container {
     width: 100%;
@@ -171,6 +177,31 @@ header .container {
     padding-bottom: 1rem;
 }
 
+/* kolla och lägg in rätt färg */
+footer {
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-gray);
+
+    .container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 5px;
+
+    }
+
+    .credit {
+        display: none;
+    }
+}
+
+
+
+
+
+
 @media (min-width: 768px) {
     .container {
       max-width: 720px;
@@ -182,6 +213,12 @@ header .container {
     
     header .container {
         gap: 3rem;
+    }
+
+    footer {
+        .credit {
+            display: block;
+        }
     }
 }
 
