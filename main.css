@@ -30,6 +30,8 @@
 body, section, div, header, footer, main, aside, nav, blockquote, p, span {   
     margin: 0;
     padding: 0;
+    line-height: 1.5;
+
 }
 
 body {
@@ -37,7 +39,12 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 1.125rem;
+    
+    h4 {
+        font-size: 1.5rem;
+    }
+
 
 
 
@@ -45,6 +52,10 @@ body {
         font-size: 20px;
         font-weight: 800; 
         line-height: 28px;
+        margin: 0.1;
+
+
+
     }
     h1 {
         font-size: 40px;
@@ -55,6 +66,12 @@ body {
         color: var(--color-gray-body-text);
     }
     
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    line-height: 1.2;
+
 }
 
 .wrapper {
@@ -289,6 +306,19 @@ footer {
     align-items: center;
 } 
 
+ @media (max-width: 1400px) {
+    .img-phone {
+       display: none;
+    }
+    span {
+        display: none;
+        
+    }
+
+
+           
+       } 
+
 /* mobilläge ner hit..mobile first från toppen plus standard grejjer */
 
 @media (min-width: 768px) {
@@ -359,7 +389,7 @@ footer {
 
 
 
-
+/* MANAGE ALL YOUR MONEY  START*/
 #hero {
    background: rgb(99,102,241);
    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
@@ -428,7 +458,7 @@ footer {
 
 
        p {
-        font-size: 18px;
+        font-size: 1.125rem;
         margin-bottom: 3rem;
 
        }
@@ -507,55 +537,56 @@ footer {
         }
     }
 }
+/* MANAGE ALL YOUR MONEY END */
 
+
+/* APP FEATURES START */
 #info-section {
 
+    
+
     .container { 
-    font-size: 16px;
-    width: 1296px;
-    height: 684px;
+    font-size: 1rem;
+    /* width: 1296px;
+    height: 684px; */
     font-weight: 400;
-    padding: 3rem;
+
 
      
 
     /* border: 5px solid black; */
     display: grid; 
-    grid-template: repeat(3, 200px) / repeat(3, 350px);
-    row-gap: .5rem;
-    column-gap: 4rem;
-    padding: 2rem;
+    grid-template: repeat(3, 200px) / repeat(4, 350px);
+    /* column-gap: 1rem; */
+    padding: 3rem; 
+
 
 
     p {
      color: var(--color-gray-body-text); 
 
-    }
-
-
+    } 
 
     .img-phone {
-        /* padding-top: 2rem; */
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 5;
+        padding-top: 4rem;
 
         
     }
+
 
     .grid-item-1 {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
-        row-gap: 2rem;
         
         p {
         color: var(--color-gray);
         }
-
-
     }
 
     .grid-item-2 {
@@ -566,7 +597,6 @@ footer {
         display: flex;
         text-align: start;
         align-items: start;    
-        
         
     }
 
@@ -620,8 +650,6 @@ footer {
         align-items: start;
     }
 
-
-
  }
 
     .icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6 {
@@ -633,52 +661,126 @@ footer {
         padding: 1rem;
         margin: 1rem;
         opacity: 95%;
-     
- 
-
 
     } 
-    
-    
-}
 
+    /* @media (width< 768px) {
+        .container {
+            grid-template-columns:repeat(1, 1fr);
+        }
+        
+    } */
+
+
+    @media (width> 768px) {
+        .container {
+            grid-template-columns: repeat(1, 2fr);
+           gap: 1rem 2rem;
+        }
+        
+        .grid-item-1 {
+            text-align: center;
+        }
+    }
+    @media (width> 1400px) {
+
+
+        .grid-item-1 {
+            text-align: start;
+            padding: 2rem;
+
+        }
+    }
+
+
+
+   
+      
+}
+/* APP FEATURES END */
  
 
-     #subscribe { 
 
-        .container { 
+/* CAROUSEL START */
+
+.carousel-section {
+    .container {
+        padding-top: 2rem;
+    }
+    padding: block;
+    background-color: var(--color-lightgray);
+    text-align: center;
+
+
+
+    .carousel {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1rem;
+
+    }
+
+    .text {
+        max-width: 70ch;
+        margin-inline: auto;
+        padding-bottom: 2rem;
+    }
+
+
+
+    @media (width < 768px) {
+        .carousel-item:first-of-type,
+        .carousel-item:last-of-type {
+            display: block;
+        }
+        
+    }
+}
+
+/* CAROUSEL END */
+
+
+
+
+
+
+
+/* SUBSCRIBE START */
+ #subscribe { 
+
+    .container { 
         display: grid;
         grid-template: repeat(1, 100px) / repeat(1, 100px);
         padding: 2rem; 
-        margin-top: 20rem;
+        margin: 2fr auto;
+        margin-top: 2rem;
 
-
-        
+        justify-content: center;
         align-items: center;
+
         background: #F3F6FF;
         border-radius: 8px;
 
         .logo {
-            grid-column-start: 2;
+            grid-column-start: 1;
             grid-column-end: 2;
-           
-    
-    
+
 
         }
 
         .info {
-            grid-column-start: 3;
-            grid-column-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
     
         }
 
         .input-group {
-            grid-column-start: 4;
-            grid-column-end: 5;
-    
+            grid-column-start: 3;
+            grid-column-end: 4;
+
         }
-    }
+     }
 
 
 
@@ -687,10 +789,13 @@ footer {
         background-color: var(--color-primary);
         color: var(--color-white);
         padding: .8em 2em;
+
         border: 0;
         /* border-radius: .5em; */
-        font-size: 18px;
-     }
+        font-size: 1.125rem;
+        cursor: pointer;
+    
+      }
 
 
 
@@ -719,6 +824,7 @@ footer {
 
      .input-group {
         position: relative;
+        margin-left: 3rem;
 
      }
 
@@ -737,4 +843,4 @@ footer {
 
     
  }
-    
+ /* SUBSCRIBE END */
