@@ -723,6 +723,10 @@ footer {
     overflow: auto; 
     justify-content: center;
 
+    #arrow {
+        margin-left: 1rem;
+    }
+
 
  
     .icon-1,  .icon-3 {
@@ -1033,11 +1037,17 @@ footer {
 
 .text {
     grid-column: 1 / 2;
-    grid-row: 1 / 2; 
-
-    
+    grid-row: 1 / 2;  
 
 }
+.contact-icon {
+    margin-top: 2rem;
+} 
+#arrow {
+    margin-left: 1rem;
+}
+
+
 
 
 .contact-1 {
@@ -1052,6 +1062,8 @@ footer {
     display: grid;
     justify-content: center;
     transform: translateY(-200%);
+    
+    
     
 
 }
